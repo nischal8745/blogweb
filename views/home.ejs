@@ -1,0 +1,35 @@
+<!-- task3 add the html boilerplate -->
+<!-- study layout in ejs for including header and footer in a ejs file -->
+
+
+
+<%- include('partials/header'); -%>
+
+<!-- task 1 to render home.ejs in server.js  -->
+
+
+
+<h1>Home</h1>
+
+<!-- task2 to display the home -->
+<p><%= content %></p>
+
+<% console.log(posts); %>
+
+<% posts.forEach(function(post){ %>
+    
+    <h1><%= post.title %></h1>
+
+    <p>
+        <%= post.content.substring(0,100) + "..." %>
+        <a href="/posts/<%= post.title %>">Read More</a>
+    </p>
+
+
+<% }) %>
+
+
+
+
+<%- include('partials/footer'); -%>
+
